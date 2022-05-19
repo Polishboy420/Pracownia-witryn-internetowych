@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function meble(meble_k, drewno_k, kolor_k) {
+        //początek konstruktora
+        this.ilosc_mebli = meble_k;
+        this.drewno = drewno_k; 
+        this.kolor = kolor_k;
+      } //koniec konstruktora
+      meble.prototype.wypisz = function () //definicja metody
+      {
+        alert(this.ilosc_mebli + " " + this.drewno + " " + this.kolor);
+      };
+      var meble1 = new meble(5, "Świerkowe", "Brązowy"); // nowy obiekt osoba1
+      var meble2 = new meble(3, "Dębowe", "Jasny brąz");
+      var meble3 = new meble(2, "Akacjowe", "Jasny rudy");
+      meble1.wypisz();
+      meble2.wypisz();
+      meble3.wypisz();
+      document.write("dostęp do właściwości" + "<br>");
+      // poniżej dostęp do pól osoby1
+      
+      document.write( "Pierwszy rodzaj mebli " + " " + meble1.ilosc_mebli + " " + meble1.drewno + " " + meble1.kolor+'<br>' );
+
+      document.write( "Drugi rodzaj mebli " + " " + meble2.ilosc_mebli + " " + meble2.drewno + " " + meble2.kolor+'<br>');
+
+      document.write( "Trzeci rodzaj mebli " + " " + meble3.ilosc_mebli + " " + meble3.drewno + " " + meble3.kolor+'<br>' );
+
+    </script>
+  </head>
+  <body>
+    <br />
+    programowanie obiektowe
+  </body>
+</html>

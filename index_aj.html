@@ -1,0 +1,227 @@
+<html>
+    <head>
+    <meta charset="UTF-8">
+        <title>11</title>
+    <script  type = "text/javascript">
+        function ant_alert() 
+        {  
+            alert ("Uwaga wykryto kliknięcie");  
+        }       
+        function WinOpen_Jozefkowicz(nazwa, x, y, shrek)
+        { 
+            window.open(nazwa, shrek,`toolbar=no,directories=no,menubar=no,height=280,width=160,top=${y},left=${x}`);
+        }
+        function ant_confirm()
+        {
+            var r=confirm("Naciśnij przycisk");
+            if(r==true)
+                {document.write("Nacisnąłeś OK!");}
+            else
+                {document.write("Nacisnąłeś CANCEL!");}
+        }
+        function ant_prompt()
+        {
+            var name=prompt("Napisz swoje imię","Imię Nazwisko")
+            if(name!=null&&name!="")
+            {
+                document.write("Witaj "+ name + " jak się masz?")
+            }
+        }
+        function ant_number()
+        {
+            var liczba1=prompt("liczba1=","");
+            var liczba2=prompt("liczba2=","");
+            var suma_liczba;
+            var odejmowanie_liczba;
+            var mnozenie_liczba;
+            var dzielenie_liczba
+            var a=parseFloat(liczba1);
+            var b=parseFloat(liczba2);
+            suma_liczba=a+b;
+            odejmowanie_liczba=a-b;
+            mnozenie_liczba=a*b;
+            dzielenie_liczba=a/b;
+            document.write("suma "+a+" + "+b+" = "+suma_liczba+"<br>");
+            document.write("różnica "+a+" - "+b+" = "+odejmowanie_liczba+"<br>");
+            document.write("mnożenie "+a+" * "+b+" = "+mnozenie_liczba+"<br>");
+            document.write("dzielenie "+a+" / "+b+" = "+dzielenie_liczba+"<br>");
+        }
+        function ant_dni()
+        {
+            var d1_joz=prompt("dzien 1"," ");
+            var d2_joz=prompt("dzien 2"," ");
+            var suma_dni;
+            var a=parseFloat(d1_joz);
+            var b=parseFloat(d2_joz);
+            if (a<=b && 1<=a && b<=31)
+            {
+            suma_dni=(b-a)*86400;
+            document.write("od ",a, " do " ,b, " minelo " ,suma_dni, " sekund")
+            }
+            else
+            {
+            document.write("wpisales zle dane")
+            }
+        }
+        function ant_godziny()
+        {
+            var d1_joze=prompt("dzien 1"," ");
+            var d2_joze=prompt("dzien 2"," ");
+            var g1_joze=prompt("godzina 1"," ");
+            var g2_joze=prompt("godzina 2"," ");
+            var suma_godzin;
+            var c=parseFloat(d1_joze);
+            var d=parseFloat(d2_joze);
+            var e=parseFloat(g1_joze);
+            var f=parseFloat(g2_joze);
+            if (c<=d && 1<=c && d<=31 && 1<=e && f<=24)
+            {
+            e=e+c*24;
+            f=f+d*24;
+            suma_godzin=(d-c)*3600;
+            document.write("od ",c," do ",d," minelo ",suma_godzin," sekund")
+            }
+            else
+            {
+            document.write("wpisales zle dane")
+            }
+
+        }
+        function ant_egipt1()
+        {
+            var m_ant=prompt("M?");
+            var ulamek_egipt;
+            var a;
+            var b;
+            var c;
+            var m=parseFloat(m_ant);
+            if(m>0)
+            {
+            a=(1/m);
+            b=(1/(m+1));
+            c=(1/(m*(m+1)));
+            document.write(a+"<br>"+b+"<br>"+c)
+            }
+            else
+            {
+            document.write("Wpisałeś złe dane!")
+            }
+        }
+        function ant_egipt2()
+        {
+            var m_ant=prompt("M?");
+            var ulamek_egipt;
+            var a;
+            var b;
+            var c;
+            var d;
+            var e;
+            var f;
+            var m=parseFloat(m_ant);
+            if(m>0)
+            {
+            a=(1/m);
+            b=(1/(m+1));
+            c=(1/(m*(m+1)));
+            d=(1/(m*(m*(m+1))));
+            e=(1/(m*(m*(m*(m+1)))));
+            f=(1/(m*(m*(m*(m*(m+1))))));
+            document.write(a+"<br>"+b+"<br>"+c+"<br>"+d+"<br>"+e+"<br>"+f)
+            }
+            else
+            {
+            document.write("Wpisałeś złe dane!")
+            }
+        }
+        function ant_AB()
+        {
+            var A=prompt("Podaj A:");
+            var B=prompt("Podaj B:");
+            var C;
+            var A=parseFloat(A);
+            var B=parseFloat(B);
+            if(A>0 && B>0)
+            {
+            document.write("A="+A+"<br>");
+            document.write("B="+B+"<br>");
+            C=((A+B)*(A+B)*(A+B));
+            document.write("("+A+"+"+B+")^3 = "+A+"^3 + 3*("+A+"^2*"+B+") + 3*"+A+"*"+B+"^2 + "+B+"^3 = "+C);
+            }
+            else
+            {
+            document.write("Wpisałeś złe dane");
+            }
+        }
+        function ant_math1()
+        {
+            var x1_ant=prompt("Podaj x1:");
+            var x2_ant=prompt("Podaj x2:");
+            var y;
+            var x1=parseFloat(x1_ant);
+            var x2=parseFloat(x2_ant);
+            y=3*(x1*0.75);
+            document.write("Podane liczby:<br> x1="+x1+"  x2="+x2+"<br>");
+            document.write("3*"+x1+"*0,75= "+y);
+        }
+        function zadania(nazwa, zalegle)
+        {
+            window.open(nazwa, zalegle,`toolbar=no,directories=no,menubar=no,height=500,width=600,`);
+        }
+   </script>
+    </head>
+    <body>
+        <div style="color: blue;"> 
+            <input type="button" name="obraz_1" value="obraz_1" onclick="WinOpen_Jozefkowicz('obraz1.html', x=10, y=340, '1' )" />
+            <input type="button" name="obraz_2" value="obraz_2" onclick="WinOpen_Jozefkowicz('obraz2.html', x=190, y=340, '2' )" />
+            <input type="button" name="obraz_3" value="obraz_3" onclick="WinOpen_Jozefkowicz('obraz3.html', x=370, y=340, '3' )" />
+            <input type="button" name="obraz_4" value="obraz_4" onclick="WinOpen_Jozefkowicz('obraz4.html', x=550, y=340, '4' )" />
+        </div>
+        <br>
+        <div style="color: coral;">
+            <input type="button" name="alert" value="Pokaz alert box" onclick="ant_alert()"/>
+            <input type="button" name="confirm" value="Pokaz confirm" onclick="ant_confirm()"/>
+            <input type="button" name="prompt" value="Pokaz prompt" onclick="ant_prompt()"/>
+            <input type="button" name="liczby" value="Pokaz liczby" onclick="ant_number()"/>
+        </div>
+        <br>
+        <div style="color: green;">
+            <input type="button" name="dni miesiaca" value="pokaz dni" onclick="ant_dni()"/>
+            <input type="button" name="godziny miesiaca" value="pokaz godziny" onclick="ant_godziny()"/>
+        </div>
+        <br>
+        <div>
+            <input type="button" name="Ułamki egipskie" value="pokaz 1 Ułamki" onclick="ant_egipt1()"/>         
+            <input type="button" name="Ułamki egipskie" value="pokaz 2 Ułamki" onclick="ant_egipt2()"/>   
+        </div>
+        <br>
+        <div>
+            <input type="button" value="pokaz obliczenia AB" onclick="ant_AB()"/>
+            <input type="button" value="pokaz math1" onclick="ant_math1()">
+        </div>
+        <br>
+        <div>
+            <input type="button" name="zadanie 18" value="zadanie 18" onclick="zadania('zadanie19.html')" />
+            <input type="button" name="zadanie 21" value="zadanie 21" onclick="zadania('zadanie21.html')" />
+            <input type="button" name="zadanie 24" value="zadanie 24" onclick="zadania('zadanie24.html')" />
+            <input type="button" name="zadanie 25" value="zadanie 25" onclick="zadania('zadanie25.html')" />
+            <input type="button" name="zadanie 26" value="zadanie 26" onclick="zadania('zadanie26.html')" />
+            <input type="button" name="zadanie 27" value="zadanie 27" onclick="zadania('zadanie27.html')" />
+            <input type="button" name="zadanie 28" value="zadanie 28" onclick="zadania('zadanie28.html')" />
+            <input type="button" name="zadanie 31" value="zadanie 31" onclick="WinOpen_Jozefkowicz('zadanie31.html')" />
+            
+        </div>
+        <br>
+        <div>
+            <input type="button" name="zadanie 32" value="zadanie 32" onclick="zadania('zadanie32.html')" />
+            <input type="button" name="zadanie 33" value="zadanie 33" onclick="zadania('zadanie33.html')" />
+            <input type="button" name="zadanie 34" value="zadanie 34" onclick="zadania('zadanie34.html')" />
+            <input type="button" name="zadanie 35" value="zadanie 35" onclick="zadania('zadanie35.html')" />
+            <input type="button" name="zadanie 36" value="zadanie 36" onclick="zadania('zadanie36.html')" />
+            <input type="button" name="zadanie 37" value="zadanie 37" onclick="zadania('zadanie37.html')" />
+            <input type="button" name="zadanie 39" value="zadanie 39" onclick="zadania('zadanie39.html')" />
+            <input type="button" name="zadanie 40" value="zadanie 40" onclick="zadania('zadanie40.html')" />
+            <input type="button" name="zadanie 41" value="zadanie 41" onclick="zadania('zadanie41.html')" />
+        </div>
+        
+    </body>
+</html>
